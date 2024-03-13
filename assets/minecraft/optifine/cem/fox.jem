@@ -267,7 +267,7 @@
 					"RightEar.rz": "torad(-30) + sin(var.time * 0.08) * -0.1",
 					"Extra.rz": "sin(var.time * 0.06) * 0.05",
 					"Sleep1.tz": "-10-is_sleeping.tx*0.02-if(var.time%80<3,(1-is_sleeping.tx)*0.02,0)",
-					"Sleep2.tz": "-10-is_sleeping.tx*0.02*if(var.time%120>90,1,0)",
+					"Sleep2.tz": "-10-min(is_sleeping.tx*0.02*if(var.time%120>90,1,0)+if(is_aggressive,0.02,0.00),0.02)",
 					"boobs.sx": "if(is_child,0,1)",
 					"boobs.sy": "if(is_child,0,1)",
 					"boobs.sz": "if(is_child,0,1)",
